@@ -77,7 +77,7 @@ export const Foods = ({
     dispatch({ type: foodsActionTyps.FETCHING });
     fetchFoods(match.params.restaurantsId)
       .then((data) => {
-        setState({ ...state, foodsList: data.foods })
+
         dispatch({
           type: foodsActionTyps.FETCH_SUCCESS,
           payload: {
